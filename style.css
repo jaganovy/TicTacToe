@@ -1,0 +1,129 @@
+body {
+    background-color: #111111;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    overflow: hidden;
+    box-sizing: border-box;
+    
+}
+
+.board {
+    display: none;
+}
+
+.infoturn {
+    display: none;
+}
+
+table {
+    font-size: 4em;
+    border-collapse: collapse;
+    display: none;
+    table-layout: fixed;
+}
+
+.winner {
+    background-color: rgba(134, 211, 62, 0.699);
+}
+
+.winner:hover {
+    background-color: rgba(90, 172, 14, 0.699);
+}
+
+table td {
+    width: 150px;
+    height: 150px;
+}
+
+table td {
+    cursor: pointer;
+    text-align: center;
+}
+
+tr:nth-child(1) td {
+    border-top: none; 
+}
+
+tr:nth-child(1) td:nth-child(3) {
+    border-right: none;
+}
+tr:nth-child(2) td:nth-child(3) {
+    border-right: none;
+}
+
+tr:nth-child(1) td:nth-child(1) {
+    border-left: none;
+}
+
+tr:nth-child(2) td:nth-child(1) {
+    border-left: none;
+}
+
+tr:nth-child(3) td:nth-child(1) {
+    border-left: none;
+    border-bottom: none; 
+}
+
+tr:nth-child(3) td:nth-child(2) {
+    border-bottom: none;
+}
+
+tr:nth-child(3) td:nth-child(3) {
+    border-bottom: none;
+    border-right: none;
+}
+
+table td {
+    border: 1px solid rgba(95, 95, 95, 0.349);
+}
+
+table td:hover {
+    background-color: rgba(95, 95, 95, 0.158);
+
+}
+
+.startgamediv {
+    margin-top:5em;
+}
+
+.startgamediv > button {
+    font-size: large;
+    border-radius: 20px;
+    border: 1px solid rebeccapurple;
+    color: rebeccapurple;
+    text-transform: uppercase;
+    appearance: none;
+    background: none;
+    cursor: pointer;
+    padding: 10px 40px;
+    transition: ease-in .05s;
+}
+
+.startgamediv > button:hover {
+    transform: scale(1.05);
+}
+
+.startgamediv > button:active{
+    transform: scale(0.99);
+}
+
+.chooseplayer {
+    display: none;
+    position: absolute;
+    background-color: antiquewhite;
+    width: 100%;
+    height: 100%;
+}
+
+.noselect {
+
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */ /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently */
+}
